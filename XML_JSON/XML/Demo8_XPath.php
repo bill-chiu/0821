@@ -10,9 +10,12 @@ $doc = new DOMDocument();
 $doc->Load('employees.xml');
 $xpath = new DOMXPath($doc);
 $entries = $xpath->query("/employees/employee/@EmpType");
+$entries1 = $xpath->query("/employees/employee");
+
 foreach ($entries as $entry) 
 {
    echo "結果：" . $entry->nodeValue . "<br>";
+
 }
 ?>
 

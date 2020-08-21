@@ -9,6 +9,7 @@ View html souce please: <HR>
 <?php
 $doc = new DOMDocument();
 $doc->load("employees.xml");
+// header("Content-type: text/xml", true);
 echo $doc->c14n();
 ?>
 
