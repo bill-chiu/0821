@@ -1,4 +1,5 @@
 <?php
+
 class WebSocketUser {
 
   public $socket;
@@ -17,5 +18,14 @@ class WebSocketUser {
   function __construct($id, $socket) {
     $this->id = $id;
     $this->socket = $socket;
+  }
+}
+
+class MyUser extends WebSocketUser {
+  public $myId;
+
+  function __construct($id, $socket, $myId) {
+    parent::__construct($id, $socket);
+    $this->myId = $myId;
   }
 }
